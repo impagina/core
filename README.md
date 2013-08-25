@@ -20,7 +20,5 @@ Once this goal has been achieved, some other function are already planned:
 
 
 Join our mailing list for further discussions:
-
 http://lists.impagina.org/mailman/listinfo/list
-
 ... or simply fork this repository or use the GitHub issues tracker!
