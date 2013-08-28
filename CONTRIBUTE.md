@@ -60,7 +60,7 @@ Delete the branch on github :
 
     $ git push origin :<name_of_your_new_branch>
 
-The only difference it's the : to say delete.
+The only difference it's the `:` to say delete.
 
 If you want to change default branch, it's so easy with github, in your fork go into Admin and in the drop-down list default branch choose what you want.
 
