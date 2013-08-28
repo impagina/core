@@ -35,7 +35,7 @@ int Scribus::run()
             std::cout << getApplicationVersion().toLocal8Bit().data() << std::endl;
             return EXIT_SUCCESS;
         }
-        else if (argument == "-h")
+        else if ((argument == "-h") || (argument == "-?") || (argument == "--help"))
         {
             std::cout << getApplicationHelp().toLocal8Bit().data() << std::endl;
             return EXIT_SUCCESS;
@@ -109,8 +109,8 @@ QString Scribus::getApplicationHelp()
     return
         tr("%1 version %2").arg(applicationName()).arg(applicationVersion()) + "\n" +
         tr("Usage:") + "\n" +
-        tr("  %1 [arguments] file [..]  process the specified file(s)").arg(arguments().at(0)) +
+        tr("  %1 [arguments] file [..]  process the specified file(s)").arg(arguments().at(0)) + "\n" +
         tr("Arguments:") + "\n" +
-        "  -v          " + tr("Print version information and exit") + "\n" +
-        "  -h          " + tr("Print Help (this message) and exit") + "\n";
+        "  -v           " + tr("Print version information and exit") + "\n" +
+        "  -h -? --help " + tr("Print Help (this message) and exit");
 }
