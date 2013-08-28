@@ -6,7 +6,7 @@ What does that mean?
 
 Very simple: You don't need to ask if you can help, you don't need to apply to join the team - all you do is you fork our repository. In your own fork you can implement and test any enhancements or fixes you would like to contribute. Once you feel your code is ready, just let us know by starting a pull request. The pull request informs the team that there is a new contribution ready to get merged into the main line of code.
 
-Make sure you work in the proper branch. Right now (as of the time of this writing) only have a master, but we will have branches for 0.1, 1.0, 1.5, 1.6 and master.
+Make sure you work in the proper branch. Right now (as of the time of this writing) we only have a master, but we will have branches for 0.1, 1.0, 1.5, 1.6 and master.
 
 So fork away and surprise us with great new features, fixes and extensions!
 
