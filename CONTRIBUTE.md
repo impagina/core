@@ -26,11 +26,11 @@ Create the branch on your local machine :
 
 Push the branch on github :
 
-<pre>$ git push origin <name_of_your_new_branch></pre>  
+    $ git push origin <name_of_your_new_branch> 
 
 Switch to your new branch :
 
-<pre>$ git checkout <name_of_your_new_branch></pre>
+    $ git checkout <name_of_your_new_branch>
 
 When you want to commit something in your branch, be sure to be in your branch.
 
@@ -40,27 +40,25 @@ You can see all branches created by using
 
 Which will show :
 
-<pre>
-* approval_messages
-  master
-  master_clean
-</pre>
+    * <name_of_your_new_branch>
+      master
+      master_clean
 
 Add a new remote for your branch :
 
-<pre>$ git remote add <name_of_your_remote> <url></pre>
+    $ git remote add <name_of_your_remote> <url>
 
 Push changes from your commit into your branch :
 
-<pre>$ git push origin <name_of_your_remote></pre>
+    $ git push origin <name_of_your_remote>
 
 Delete a branch on your local filesytem :
 
-<pre>$ git branch -d <name_of_your_new_branch></pre>
+    $ git branch -d <name_of_your_new_branch>
 
 Delete the branch on github :
 
-<pre>$ git push origin :<name_of_your_new_branch></pre>
+    $ git push origin :<name_of_your_new_branch>
 
 The only difference it's the : to say delete.
 
