@@ -1,4 +1,3 @@
-
 # How do i contribute?
 
 Contributions to Scribus-core is very easy. Being on GitHub, the source code has become social.
@@ -23,7 +22,7 @@ Before create a new branch pull the changes from upstream, your master need to b
 
 Create the branch on your local machine :
 
-<pre>$ git branch <name_of_your_new_branch></pre>  
+    $ git branch <name_of_your_new_branch>
 
 Push the branch on github :
 
