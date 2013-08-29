@@ -11,12 +11,15 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 
+INCLUDEPATH  += plugins
+
 SOURCES += \
     main.cpp \
     scribus.cpp
 
 HEADERS += \
-    scribus.h
+    scribus.h \
+    plugins/pluginInterface.h
 
 OTHER_FILES += \
     README.md

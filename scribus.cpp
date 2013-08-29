@@ -3,9 +3,16 @@
 #include <iostream>
 
 #include <QDebug>
+
+#include <QSettings>
+
 #include <QStringList>
 #include <QFile>
 #include <QFileInfo>
+
+#include <QDir>
+#include <QPluginLoader>
+#include <plugins/pluginInterface.h>
 
 /**
   * TODO: On windows, depending on how the application is started, arguments() is not "correctly" filled.
@@ -70,6 +77,8 @@ int Scribus::run()
         return EXIT_FAILURE;
     }
 
+    loadPlugins();
+
     // TODO: load the file (ale/20130828)
     qDebug() << "filename" << filename;
 
@@ -113,4 +122,32 @@ QString Scribus::getApplicationHelp()
         tr("Arguments:") + "\n" +
         "  -v           " + tr("Print version information and exit") + "\n" +
         "  -h -? --help " + tr("Print Help (this message) and exit");
+}
+
+void Scribus::loadPlugins()
+{
+    // QCoreApplication::addLibraryPath("plugins");
+    QDir pluginsDir = QDir(qApp->applicationDirPath());
+    pluginsDir.cd("plugins");
+    // qDebug() << "pluginsDir" << pluginsDir;
+    pluginsDir.cd("load");
+    // qDebug() << "pluginsDir" << pluginsDir;
+    /*
+    foreach (QObject *plugin, QPluginLoader::staticInstances())
+    {
+        qDebug() << "plugin" << plugin;
+    }
+    */
+    foreach (QString filename, pluginsDir.entryList(QDir::Files)) {
+        QPluginLoader loader(pluginsDir.absoluteFilePath(filename));
+        qDebug() << "filename" << filename;
+        if (QObject *object = loader.instance())
+        {
+            // qDebug() << "plugin" << plugin;
+            PluginLoadInterface* plugin = qobject_cast<PluginLoadInterface *>(object);
+            qDebug() << "plugin name" << plugin->getName();
+            pluginsLoad.append(plugin);
+        }
+
+    }
 }

@@ -5,6 +5,10 @@
 
 class QString;
 
+#include <QList>
+#include <plugins/pluginInterface.h>
+
+
 class Scribus : public QCoreApplication
 {
     Q_OBJECT
@@ -14,6 +18,11 @@ public:
     QString getApplicationVersion();
     QString getApplicationUsage();
     QString getApplicationHelp();
+
+    void loadPlugins();
+
+protected:
+    QList<PluginLoadInterface*> pluginsLoad;
 
 signals:
     
