@@ -25,10 +25,12 @@ win32:LIBS += \
     $$quote($$SCRIBUSLIBRARIESDIR/domain.dll)
 #unix:LIBS += \
     #$$quote(-L$$SCRIBUSLIBRARIESDIR) -ldocument
-#unix:QMAKE_RPATHDIR += \
-    #$$quote($$SCRIBUSLIBRARIESDIR/libraries)
+# alternative to export LD_LIBRARY_PATH="libraries/"
+unix:QMAKE_RPATHDIR += \
+    $$quote($$SCRIBUSLIBRARIESDIR)
 unix:LIBS += \
-    -Llibraries
+    -Llibraries -ldocument
+
 
 SOURCES += \
     main.cpp \

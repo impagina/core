@@ -90,7 +90,6 @@ int Scribus::run()
     }
     qDebug() << "filename" << filename;
     Document *document = new Document();
-    return 1;
     foreach (QString item, filename)
     {
         PluginLoadInterface *loader = pluginsLoad.first();
