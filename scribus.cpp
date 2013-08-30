@@ -79,9 +79,25 @@ int Scribus::run()
 
     loadPlugins();
 
-    // TODO: load the file (ale/20130828)
+    // for now, just get the first sla-load plugin, if any, and use it
+    // in the future, the user will be able to tell us the version or ask to guess. the default will be to use
+    // the current version.
+    if (pluginsLoad.empty())
+    {
+        return false;
+    }
     qDebug() << "filename" << filename;
+    foreach (QString item, filename)
+    {
+        PluginLoadInterface *loader = pluginsLoad.first();
+        if (loader->loadFile(item))
+        {
+            // TODO: put the documents in a list or do some further processing as soon as they're loaded (ale/20130829)
+            Document *document = loader->getDocument();
+        }
+    }
 
+    qDebug() << "result" << result;
     return result;
 }
 
@@ -132,15 +148,9 @@ void Scribus::loadPlugins()
     // qDebug() << "pluginsDir" << pluginsDir;
     pluginsDir.cd("load");
     // qDebug() << "pluginsDir" << pluginsDir;
-    /*
-    foreach (QObject *plugin, QPluginLoader::staticInstances())
-    {
-        qDebug() << "plugin" << plugin;
-    }
-    */
     foreach (QString filename, pluginsDir.entryList(QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(filename));
-        qDebug() << "filename" << filename;
+        qDebug() << "filename is a plugin?" << filename;
         if (QObject *object = loader.instance())
         {
             // qDebug() << "plugin" << plugin;

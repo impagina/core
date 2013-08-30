@@ -11,7 +11,7 @@ CONFIG   -= app_bundle
 # DESTDIR += ../plugins
 CONFIG   += debug
 
-INCLUDEPATH  += ../..
+INCLUDEPATH  += ../../..
 
 TARGET = loadSla15
 

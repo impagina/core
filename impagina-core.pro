@@ -15,11 +15,13 @@ INCLUDEPATH  += plugins
 
 SOURCES += \
     main.cpp \
-    scribus.cpp
+    scribus.cpp \
+    document/document.cpp
 
 HEADERS += \
     scribus.h \
-    plugins/pluginInterface.h
+    plugins/pluginInterface.h \
+    document/document.h
 
 OTHER_FILES += \
     README.md

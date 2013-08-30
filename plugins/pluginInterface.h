@@ -2,6 +2,10 @@
 #define PLUGININTERFACE_H
 
 #include <QtPlugin>
+
+class QString;
+class Document;
+
 class PluginInterface
 {
     public:
@@ -14,6 +18,8 @@ class PluginLoadInterface : public PluginInterface
 {
     public:
         virtual ~PluginLoadInterface() {}
+        virtual bool loadFile(QString filename) = 0;
+        virtual Document* getDocument() = 0;
 };
 
 class PluginStoreInterface : public PluginInterface
