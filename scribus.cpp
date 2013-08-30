@@ -13,6 +13,7 @@
 #include <QDir>
 #include <QPluginLoader>
 #include <plugins/pluginInterface.h>
+#include <document/document.h>
 
 /**
   * TODO: On windows, depending on how the application is started, arguments() is not "correctly" filled.
@@ -31,7 +32,7 @@ int Scribus::run()
     int result = EXIT_SUCCESS;
     QStringList arguments = this->arguments();
     QStringList filename = QStringList();
-    // qDebug() << "arguments" << arguments;
+    qDebug() << "arguments" << arguments;
 
 
     for (int i = 1; i < arguments.count(); i++)
@@ -84,9 +85,12 @@ int Scribus::run()
     // the current version.
     if (pluginsLoad.empty())
     {
+        std::cerr << "no load plugin loaded" << "\n";
         return false;
     }
     qDebug() << "filename" << filename;
+    Document *document = new Document();
+    return 1;
     foreach (QString item, filename)
     {
         PluginLoadInterface *loader = pluginsLoad.first();
@@ -95,6 +99,7 @@ int Scribus::run()
             // TODO: put the documents in a list or do some further processing as soon as they're loaded (ale/20130829)
             Document *document = loader->getDocument();
         }
+
     }
 
     qDebug() << "result" << result;
@@ -145,8 +150,8 @@ void Scribus::loadPlugins()
     // QCoreApplication::addLibraryPath("plugins");
     QDir pluginsDir = QDir(qApp->applicationDirPath());
     pluginsDir.cd("plugins");
-    // qDebug() << "pluginsDir" << pluginsDir;
-    pluginsDir.cd("load");
+    qDebug() << "pluginsDir" << pluginsDir;
+    // pluginsDir.cd("load");
     // qDebug() << "pluginsDir" << pluginsDir;
     foreach (QString filename, pluginsDir.entryList(QDir::Files)) {
         QPluginLoader loader(pluginsDir.absoluteFilePath(filename));

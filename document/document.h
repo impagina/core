@@ -1,18 +1,12 @@
 #ifndef DOCUMENT_H
 #define DOCUMENT_H
 
-#include <QObject>
+#include "document_global.h"
 
-class Document : public QObject
+class DOCUMENTSHARED_EXPORT Document
 {
-    Q_OBJECT
 public:
-    explicit Document(QObject *parent = 0);
-    
-signals:
-    
-public slots:
-    
+    Document();
 };
 
 #endif // DOCUMENT_H

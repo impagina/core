@@ -11,12 +11,28 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 
-INCLUDEPATH  += plugins
+DEPENDPATH  += \
+    document
+
+SCRIBUSLIBRARIESDIR = $$OUT_PWD/libraries
+SCRIBUSPLUGINDIR = $$OUT_PWD/plugins
+
+INCLUDEPATH  += \
+    plugins\
+    libraries
+
+win32:LIBS += \
+    $$quote($$SCRIBUSLIBRARIESDIR/domain.dll)
+#unix:LIBS += \
+    #$$quote(-L$$SCRIBUSLIBRARIESDIR) -ldocument
+#unix:QMAKE_RPATHDIR += \
+    #$$quote($$SCRIBUSLIBRARIESDIR/libraries)
+unix:LIBS += \
+    -Llibraries
 
 SOURCES += \
     main.cpp \
-    scribus.cpp \
-    document/document.cpp
+    scribus.cpp
 
 HEADERS += \
     scribus.h \
@@ -25,3 +41,4 @@ HEADERS += \
 
 OTHER_FILES += \
     README.md
+

@@ -13,6 +13,9 @@ CONFIG   += debug
 
 INCLUDEPATH  += ../../..
 
+unix:LIBS += \
+    -L../libraries
+
 TARGET = loadSla15
 
 

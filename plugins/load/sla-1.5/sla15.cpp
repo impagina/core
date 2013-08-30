@@ -21,10 +21,9 @@ bool LoadSla15::loadFile(QString filename)
     }
 
     // TODO: it seams that Document should be compiled as a library and not in the executable to be accessed in a plugin
-    // document = new Document();
+    document = new Document();
 
 
-    /*
     QXmlStreamReader *xmlReader = new QXmlStreamReader(file);
     while(!xmlReader->atEnd() && !xmlReader->hasError())
     {
@@ -45,7 +44,6 @@ bool LoadSla15::loadFile(QString filename)
             }
          }
     }
-    */
 
     return true;
 }
