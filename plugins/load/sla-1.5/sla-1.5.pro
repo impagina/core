@@ -11,18 +11,20 @@ CONFIG   -= app_bundle
 # DESTDIR += ../plugins
 CONFIG   += debug
 
-INCLUDEPATH  += ../../..
+INCLUDEPATH  += \
+    ../../.. \
+    ../../../libraries
 
-# SCRIBUSLIBRARIESDIR = ../libraries
 #SCRIBUSLIBRARIESDIR = $$OUT_PWD/../../../libraries
 SCRIBUSLIBRARIESDIR = /home/ale/docs/src/impagina-core-build/libraries
 
 # alternative to export LD_LIBRARY_PATH="../libraries/"
 unix:QMAKE_RPATHDIR += \
     $$quote($$SCRIBUSLIBRARIESDIR)
-    #../../../libraries
+
 unix:LIBS += \
-    -L../../../libraries -ldocument
+    -L../../../libraries -ldocument \
+    -L../../../libraries -lsettings
 
 TARGET = loadSla15
 

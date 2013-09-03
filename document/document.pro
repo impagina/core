@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2013-08-30T15:20:28
-#
-#-------------------------------------------------
-
 QT       -= gui
 
 TARGET = document
@@ -11,10 +5,32 @@ TEMPLATE = lib
 
 DEFINES += DOCUMENT_LIBRARY
 
-SOURCES += document.cpp
+INCLUDEPATH  += \
+    ../ \
+    ../libraries
 
-HEADERS += document.h\
-        document_global.h
+#SCRIBUSLIBRARIESDIR = $$OUT_PWD/../../../libraries
+SCRIBUSLIBRARIESDIR = /home/ale/docs/src/impagina-core-build/libraries
+
+# alternative to export LD_LIBRARY_PATH="../libraries/"
+unix:QMAKE_RPATHDIR += \
+    $$quote($$SCRIBUSLIBRARIESDIR)
+
+unix:LIBS += \
+    -L.. -lglobal
+
+SOURCES += \
+    document.cpp \
+    documentPage.cpp \
+    documentLayout.cpp \
+    documentTypography.cpp
+
+HEADERS += \
+    document.h\
+    document_global.h \
+    documentPage.h \
+    documentLayout.h \
+    documentTypography.h
 
 symbian {
     MMP_RULES += EXPORTUNFROZEN
@@ -34,3 +50,6 @@ unix:!symbian {
     }
     INSTALLS += target
 }
+
+OTHER_FILES += \
+    README.txt
