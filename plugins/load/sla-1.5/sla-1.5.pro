@@ -23,6 +23,7 @@ unix:QMAKE_RPATHDIR += \
     $$quote($$SCRIBUSLIBRARIESDIR)
 
 unix:LIBS += \
+    -L../../../libraries -lstyle \
     -L../../../libraries -ldocument \
     -L../../../libraries -lsettings
 

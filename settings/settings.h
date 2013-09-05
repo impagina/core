@@ -13,6 +13,20 @@
 class DocumentPage;
 class DocumentLayout;
 class DocumentTypography;
+class DocumentColorManagement;
+class DocumentInformation;
+class StyleCharacter;
+class StyleParagraph;
+class StylePolygon;
+class StyleArc;
+class StyleSpiral;
+class StyleLine;
+class StyleImage;
+class StyleShape;
+class StyleCalligraphicPen;
+class SettingsDuplicateItem;
+class SettingsRotation;
+class SettingsTypography;
 
 class SETTINGSSHARED_EXPORT Settings
 {
@@ -21,6 +35,20 @@ public:
     void setPage(DocumentPage *page) {this->page = page;}
     void setLayout(DocumentLayout *layout) {this->layout = layout;}
     void setTypography(DocumentTypography *typography) {this->typography = typography;}
+    void setColorManagement(DocumentColorManagement *colorManagement) {this->colorManagement = colorManagement;}
+    void setInformation(DocumentInformation *information) {this->information = information;}
+    void setCharacter(StyleCharacter *character) {this->character = character;}
+    void setParagraph(StyleParagraph *paragraph) {this->paragraph = paragraph;}
+    void setPolygon(StylePolygon *polygon) {this->polygon = polygon;}
+    void setArc(StyleArc *arc) {this->arc = arc;}
+    void setSpiral(StyleSpiral *spiral) {this->spiral = spiral;}
+    void setLine(StyleLine *line) {this->line = line;}
+    void setImage(StyleImage *image) {this->image = image;}
+    void setShape(StyleShape *shape) {this->shape = shape;}
+    void setCalligraphicPen(StyleCalligraphicPen *calligraphicPen) {this->calligraphicPen = calligraphicPen;}
+    void setDuplicateItem(SettingsDuplicateItem *duplicateItem) {this->duplicateItem = duplicateItem;}
+    void setRotation(SettingsRotation *rotation) {this->rotation = rotation;}
+    void setTypographySettings(SettingsTypography *typography) {this->typographySettings = typography;}
 
     void setLengthUnit(QString unit) {lengthUnit = unit.toInt();}
     void setAutomaticSave(QString automatic) {automaticSave = automatic.TOBOOL();}
@@ -39,9 +67,24 @@ public:
     void setMarginAreaCovered(QString covered) {marginAreaCovered = covered.TOBOOL();}
 
 protected:
-    DocumentPage *page; // used for document settings
-    DocumentLayout *layout; // used for document settings
-    DocumentTypography *typography; // used for document settings
+    // used for document settings
+    DocumentPage *page;
+    DocumentLayout *layout;
+    DocumentTypography *typography;
+    DocumentColorManagement *colorManagement;
+    DocumentInformation *information;
+    StyleCharacter *character;
+    StyleParagraph *paragraph;
+    StylePolygon *polygon;
+    StyleArc *arc;
+    StyleSpiral *spiral;
+    StyleLine *line;
+    StyleImage *image;
+    StyleShape *shape;
+    StyleCalligraphicPen *calligraphicPen;
+    SettingsDuplicateItem *duplicateItem;
+    SettingsRotation *rotation;
+    SettingsTypography *typographySettings;
 
     int lengthUnit; // TODO: should be a set (ale/20130901)
     bool automaticSave;

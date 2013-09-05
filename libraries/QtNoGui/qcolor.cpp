@@ -343,6 +343,25 @@ void QColor::getRgb(int *r, int *g, int *b, int *a) const
         *a = ct.argb.alpha >> 8;
 }
 
+void QColor::setRgbF(qreal r, qreal g, qreal b, qreal a)
+{
+    if (r < 0.0 || r > 1.0
+        || g < 0.0 || g > 1.0
+        || b < 0.0 || b > 1.0
+        || a < 0.0 || a > 1.0) {
+        qWarning("QColor::setRgbF: RGB parameters out of range");
+        invalidate();
+        return;
+    }
+
+    cspec = Rgb;
+    ct.argb.alpha = qRound(a * USHRT_MAX);
+    ct.argb.red   = qRound(r * USHRT_MAX);
+    ct.argb.green = qRound(g * USHRT_MAX);
+    ct.argb.blue  = qRound(b * USHRT_MAX);
+    ct.argb.pad   = 0;
+}
+
 void QColor::setRgb(int r, int g, int b, int a)
 {
     if ((uint)r > 255 || (uint)g > 255 || (uint)b > 255 || (uint)a > 255) {

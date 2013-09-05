@@ -19,10 +19,17 @@ unix:LIBS += \
     -L.. -lglobal \
     -L.. -lQtNoGui
 
-SOURCES += settings.cpp
+SOURCES += settings.cpp \
+    settingsRotation.cpp \
+    settingsTypography.cpp \
+    settingsDuplicateItem.cpp
 
-HEADERS += settings.h\
-        settings_global.h
+HEADERS += \
+    settings.h \
+    settings_global.h \
+    settingsRotation.h \
+    settingsDuplicateItem.h \
+    settingsTypography.h
 
 
 unix:!symbian {

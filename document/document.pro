@@ -17,20 +17,25 @@ unix:QMAKE_RPATHDIR += \
     $$quote($$SCRIBUSLIBRARIESDIR)
 
 unix:LIBS += \
-    -L.. -lglobal
+    -L.. -lglobal \
+    -L.. -lQtNoGui
 
 SOURCES += \
     document.cpp \
     documentPage.cpp \
     documentLayout.cpp \
-    documentTypography.cpp
+    documentTypography.cpp \
+    documentColorManagement.cpp \
+    documentInformation.cpp
 
 HEADERS += \
     document.h\
     document_global.h \
     documentPage.h \
     documentLayout.h \
-    documentTypography.h
+    documentTypography.h \
+    documentColorManagement.h \
+    documentInformation.h
 
 symbian {
     MMP_RULES += EXPORTUNFROZEN
