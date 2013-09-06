@@ -1,0 +1,11 @@
+" in styleFill.h class methods
+" from: settingsTypography->setValueSuperScript(attributes.value("VHOCH")); // AsInt
+" to void setColor(QString color) {this->color = color;}
+:let @q = "df>ivoid f(ldi(bb3lyef(pbiQString lgulye$i {this->pa = pa;}lxj^"
+" in styleFill.h's class variables
+" from void setColor(QString color) {this->color = color;}
+" to QString color;
+:let @w = "$F.lllye^Pldf>i f=hDa;j^"
+" from: doc->typographicPrefs().valueSuperScript   = attrs.valueAsInt("VHOCH");
+" to: settingsTypography->setValueSuperScript(attributes.value("VHOCH")); // AsInt
+:let @a = "df.i->setlgUlea(ldf=xeiibutefAde$i)A // pj^"

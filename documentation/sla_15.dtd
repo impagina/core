@@ -1,0 +1,536 @@
+<!--
+DTD created starting with an very simple .SLA file containing one image frame and one text frame
+- check with http://www.xmlgrrl.com/publications/DSDTD/ch09.html for sanity.
+- author: ale@graphicslab.org 20130829
+- v = ok, i = ignored
+-->
+<!ELEMENT SCRIBUSUTF8NEW (DOCUMENT)>
+<!ATTLIST SCRIBUSUTF8NEW Version CDATA #REQUIRED> <!-- ="1.5.0.svn" -->
+
+<!ELEMENTDOCUMENT(CheckProfile*,COLOR*,HYPHEN,STYLE*,CHARSTYLE*,TableStyle*,CellStyle*,LAYERS*,Printer,PDF,DocItemAttributes,TablesOfContents,NotesStyles,NotesFrames,PageSets,Sections,MASTERPAGE,PAGE,PAGEOBJECT)>
+<!ATTLIST DOCUMENT ANZPAGES CDATA #REQUIRED> <!-- ="1" # i -->
+<!ATTLIST DOCUMENT PAGEWIDTH CDATA #REQUIRED> <!-- ="595.28" v -->
+<!ATTLIST DOCUMENT PAGEHEIGHT CDATA #REQUIRED> <!-- ="841.89" v -->
+<!ATTLIST DOCUMENT BORDERLEFT CDATA #REQUIRED> <!-- ="40" v -->
+<!ATTLIST DOCUMENT BORDERRIGHT CDATA #REQUIRED> <!-- ="40" v -->
+<!ATTLIST DOCUMENT BORDERTOP CDATA #REQUIRED> <!-- ="40" v -->
+<!ATTLIST DOCUMENT BORDERBOTTOM CDATA #REQUIRED> <!-- ="40" v -->
+<!ATTLIST DOCUMENT PRESET CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT BleedTop CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT BleedLeft CDATA #REQUIRED> <!-- ="0" i -->
+<!ATTLIST DOCUMENT BleedRight CDATA #REQUIRED> <!-- ="0" i -->
+<!ATTLIST DOCUMENT BleedBottom CDATA #REQUIRED> <!-- ="0" i -->
+<!ATTLIST DOCUMENT ORIENTATION CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT PAGESIZE CDATA #REQUIRED> <!-- ="A4" v -->
+<!ATTLIST DOCUMENT FIRSTNUM CDATA #REQUIRED> <!-- ="1" v # TODO: probably not used (cf. sections) -->
+<!ATTLIST DOCUMENT BOOK CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT AUTOTEXT CDATA #IMPLIED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT AUTOSPALTEN CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT ABSTSPALTEN CDATA #REQUIRED> <!-- ="11" v -->
+<!ATTLIST DOCUMENT UNITS CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT DFONT CDATA #REQUIRED> <!-- ="Bitstream Charter Regular" v -->
+<!ATTLIST DOCUMENT DSIZE CDATA #REQUIRED> <!-- ="12"v -->
+<!ATTLIST DOCUMENT DCOL CDATA #REQUIRED> <!-- ="1"v -->
+<!ATTLIST DOCUMENT DGAP CDATA #REQUIRED> <!-- ="0"v -->
+<!ATTLIST DOCUMENT TabFill CDATA #REQUIRED> <!-- =""v -->
+<!ATTLIST DOCUMENT TabWidth CDATA #REQUIRED> <!-- ="36"v -->
+<!ATTLIST DOCUMENT AUTHOR CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT COMMENTS CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT KEYWORDS CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT PUBLISHER CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCDATE CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCTYPE CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCFORMAT CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCIDENT CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCSOURCE CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCLANGINFO CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCRELATION CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCCOVER CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCRIGHTS CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT DOCCONTRIB CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT TITLE CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT SUBJECT CDATA #REQUIRED> <!-- ="" v -->
+<!ATTLIST DOCUMENT VHOCH CDATA #REQUIRED> <!-- ="33" v -->
+<!ATTLIST DOCUMENT VHOCHSC CDATA #REQUIRED> <!-- ="66" v -->
+<!ATTLIST DOCUMENT VTIEF CDATA #REQUIRED> <!-- ="33" v -->
+<!ATTLIST DOCUMENT VTIEFSC CDATA #REQUIRED> <!-- ="66" v -->
+<!ATTLIST DOCUMENT VKAPIT CDATA #REQUIRED> <!-- ="75" v -->
+<!ATTLIST DOCUMENT BASEGRID CDATA #REQUIRED> <!-- ="14.4" v -->
+<!ATTLIST DOCUMENT BASEO CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT AUTOL CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT UnderlinePos CDATA #REQUIRED> <!-- ="-1" v -->
+<!ATTLIST DOCUMENT UnderlineWidth CDATA #REQUIRED> <!-- ="-1" v -->
+<!ATTLIST DOCUMENT StrikeThruPos CDATA #REQUIRED> <!-- ="-1" v -->
+<!ATTLIST DOCUMENT StrikeThruWidth CDATA #REQUIRED> <!-- ="-1" v -->
+<!ATTLIST DOCUMENT GROUPC CDATA #REQUIRED> <!-- ="1" missing in scribus150format -->
+<!ATTLIST DOCUMENT HCMS CDATA #REQUIRED> <!-- ="0" missing in scribus150format -->
+<!ATTLIST DOCUMENT DPSo CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT DPSFo CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT DPuse CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT DPgam CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT DPbla CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT DPMo CDATA #REQUIRED> <!-- ="sRGB IEC61966-2.1" v -->
+<!ATTLIST DOCUMENT DPPr CDATA #REQUIRED> <!-- ="Fogra27L CMYK Coated Press" v -->
+<!ATTLIST DOCUMENT DPIn CDATA #REQUIRED> <!-- ="sRGB IEC61966-2.1" v -->
+<!ATTLIST DOCUMENT DPInCMYK CDATA #REQUIRED> <!-- ="Fogra27L CMYK Coated Press" v -->
+<!ATTLIST DOCUMENT DPIn2 CDATA #REQUIRED> <!-- ="sRGB IEC61966-2.1" v -->
+<!ATTLIST DOCUMENT DPIn3 CDATA #REQUIRED> <!-- ="Fogra27L CMYK Coated Press" v -->
+<!ATTLIST DOCUMENT DISc CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT DIIm CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT ALAYER CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT LANGUAGE CDATA #REQUIRED> <!-- ="en_GB" v # is it IMPLIED?-->
+<!ATTLIST DOCUMENT MINWORDLEN CDATA #REQUIRED> <!-- ="3" v -->
+<!ATTLIST DOCUMENT HYCOUNT CDATA #REQUIRED> <!-- ="2" v -->
+<!ATTLIST DOCUMENT AUTOMATIC CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT AUTOCHECK CDATA #REQUIRED> <!-- ="0" # not implemented; hyphenate.h says it's probably obsolete -->
+<!ATTLIST DOCUMENT GUIDELOCK CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT SnapToGuides CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT SnapToElement CDATA #IMPLIED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT SnapToGrid CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT MINGRID CDATA #REQUIRED> <!-- ="20" -->
+<!ATTLIST DOCUMENT MAJGRID CDATA #REQUIRED> <!-- ="100" -->
+<!ATTLIST DOCUMENT SHOWGRID CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT SHOWGUIDES CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT showcolborders CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT SHOWFRAME CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT SHOWLAYERM CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT SHOWMARGIN CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT SHOWBASE CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT SHOWPICT CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT SHOWControl CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT SHOWLINK CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT rulerMode CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT showrulers CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT showBleed CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST DOCUMENT rulerXoffset CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT rulerYoffset CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST DOCUMENT GuideRad CDATA #REQUIRED> <!-- ="10" v -->
+<!ATTLIST DOCUMENT GRAB CDATA #REQUIRED> <!-- ="4" v -->
+<!ATTLIST DOCUMENT POLYC CDATA #REQUIRED> <!-- ="4"v -->
+<!ATTLIST DOCUMENT POLYF CDATA #REQUIRED> <!-- ="0.502"v -->
+<!ATTLIST DOCUMENT POLYR CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT POLYIR CDATA #REQUIRED> <!-- ="0" v-->
+<!ATTLIST DOCUMENT POLYCUR CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT POLYOCUR CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT POLYS CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT arcStartAngle CDATA #REQUIRED> <!-- ="30" v -->
+<!ATTLIST DOCUMENT arcSweepAngle CDATA #REQUIRED> <!-- ="300" v -->
+<!ATTLIST DOCUMENT spiralStartAngle CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT spiralEndAngle CDATA #REQUIRED> <!-- ="1080" v -->
+<!ATTLIST DOCUMENT spiralFactor CDATA #REQUIRED> <!-- ="1.2" v -->
+<!ATTLIST DOCUMENT AutoSave CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT AutoSaveTime CDATA #REQUIRED> <!-- ="600000" v -->
+<!ATTLIST DOCUMENT ScratchBottom CDATA #REQUIRED> <!-- ="20" v -->
+<!ATTLIST DOCUMENT ScratchLeft CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT ScratchRight CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT ScratchTop CDATA #REQUIRED> <!-- ="20" v -->
+<!ATTLIST DOCUMENT GapHorizontal CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT GapVertical CDATA #REQUIRED> <!-- ="40" v -->
+<!ATTLIST DOCUMENT StartArrow CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT EndArrow CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT PEN CDATA #REQUIRED> <!-- ="Black" v -->
+<!ATTLIST DOCUMENT BRUSH CDATA #REQUIRED> <!-- ="None" v -->
+<!ATTLIST DOCUMENT PENLINE CDATA #REQUIRED> <!-- ="Black" v -->
+<!ATTLIST DOCUMENT PENTEXT CDATA #REQUIRED> <!-- ="Black" v -->
+<!ATTLIST DOCUMENT StrokeText CDATA #REQUIRED> <!-- ="Black" v -->
+<!ATTLIST DOCUMENT TextBackGround CDATA #REQUIRED> <!-- ="None" v -->
+<!ATTLIST DOCUMENT TextLineColor CDATA #REQUIRED> <!-- ="None" v -->
+<!ATTLIST DOCUMENT TextBackGroundShade CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT TextLineShade CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT TextPenShade CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT TextStrokeShade CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT STIL CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT STILLINE CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT WIDTH CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT WIDTHLINE CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT PENSHADE CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT LINESHADE CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT BRUSHSHADE CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT CPICT CDATA #REQUIRED> <!-- ="None" v -->
+<!ATTLIST DOCUMENT PICTSHADE CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT CSPICT CDATA #REQUIRED> <!-- ="None" v -->
+<!ATTLIST DOCUMENT PICTSSHADE CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT PICTSCX CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT PICTSCY CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT PSCALE CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT PASPECT CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT EmbeddedPath CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT HalfRes CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT dispX CDATA #REQUIRED> <!-- ="10" v -->
+<!ATTLIST DOCUMENT dispY CDATA #REQUIRED> <!-- ="10" v -->
+<!ATTLIST DOCUMENT constrain CDATA #REQUIRED> <!-- ="15" v -->
+<!ATTLIST DOCUMENT MINORC CDATA #REQUIRED> <!-- ="#00ff00" v -->
+<!ATTLIST DOCUMENT MAJORC CDATA #REQUIRED> <!-- ="#00ff00" v -->
+<!ATTLIST DOCUMENT GuideC CDATA #REQUIRED> <!-- ="#000080" v -->
+<!ATTLIST DOCUMENT BaseC CDATA #REQUIRED> <!-- ="#c0c0c0" v -->
+<!ATTLIST DOCUMENT renderStack CDATA #REQUIRED> <!-- ="0 1 2 3 4" v -->
+<!ATTLIST DOCUMENT GridType CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT PAGEC CDATA #REQUIRED> <!-- ="#ffffff" -->
+<!ATTLIST DOCUMENT MARGC CDATA #REQUIRED> <!-- ="#0000ff" -->
+<!ATTLIST DOCUMENT RANDF CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT currentProfile CDATA #REQUIRED> <!-- ="PostScript" -->
+<!ATTLIST DOCUMENT calligrapicPenFillColor CDATA #REQUIRED> <!-- ="Black" v -->
+<!ATTLIST DOCUMENT calligrapicPenLineColor CDATA #REQUIRED> <!-- ="Black" v -->
+<!ATTLIST DOCUMENT calligrapicPenFillColorShade CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT calligrapicPenLineColorShade CDATA #REQUIRED> <!-- ="100" v -->
+<!ATTLIST DOCUMENT calligrapicPenLineWidth CDATA #REQUIRED> <!-- ="1" v -->
+<!ATTLIST DOCUMENT calligrapicPenAngle CDATA #REQUIRED> <!-- ="0" v -->
+<!ATTLIST DOCUMENT calligrapicPenWidth CDATA #REQUIRED> <!-- ="10" v -->
+<!ATTLIST DOCUMENT calligrapicPenStyle CDATA #REQUIRED> <!-- ="1" v -->
+
+<!ELEMENT CheckProfile (EMPTY)>
+<!ATTLIST CheckProfile Name CDATA #REQUIRED> <!-- ="PDF 1.3" -->
+<!ATTLIST CheckProfile ignoreErrors CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST CheckProfile autoCheck CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkGlyphs CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkOrphans CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkOverflow CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkPictures CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkPartFilledImageFrames CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST CheckProfile checkResolution CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkTransparency CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile minResolution CDATA #REQUIRED> <!-- ="144" -->
+<!ATTLIST CheckProfile maxResolution CDATA #REQUIRED> <!-- ="2400" -->
+<!ATTLIST CheckProfile checkAnnotations CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST CheckProfile checkRasterPDF CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile checkForGIF CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CheckProfile ignoreOffLayers CDATA #REQUIRED> <!-- ="0" -->
+
+<!ELEMENT COLOR (EMPTY)>
+<!ATTLIST COLOR NAME CDATA #REQUIRED> <!-- ="Black" -->
+<!ATTLIST COLOR CMYK CDATA #IMPLIED> <!-- ="#000000ff" -->
+<!ATTLIST COLOR Registration CDATA #IMPLIED> <!-- ="1" -->
+
+<!ELEMENT HYPHEN (EMPTY)>
+
+<!ELEMENT STYLE (EMPTY)>
+<!ATTLIST STYLE NAME CDATA #REQUIRED> <!-- ="Default Paragraph Style" -->
+<!ATTLIST STYLE DefaultStyle CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST STYLE ALIGN CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE LINESPMode CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE LINESP CDATA #REQUIRED> <!-- ="15" -->
+<!ATTLIST STYLE INDENT CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE RMARGIN CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE FIRST CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE VOR CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE NACH CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE DROP CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST STYLE DROPLIN CDATA #REQUIRED> <!-- ="2" -->
+<!ATTLIST STYLE DROPDIST CDATA #REQUIRED> <!-- ="0" -->
+
+<!ELEMENT CHARSTYLE (EMPTY)>
+<!ATTLIST CHARSTYLE CNAME CDATA #REQUIRED> <!-- ="Default Character Style" -->
+<!ATTLIST CHARSTYLE DefaultStyle CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CHARSTYLE FONT CDATA #REQUIRED> <!-- ="Bitstream Charter Regular" -->
+<!ATTLIST CHARSTYLE FONTSIZE CDATA #REQUIRED> <!-- ="12" -->
+<!ATTLIST CHARSTYLE FEATURES CDATA #REQUIRED> <!-- ="inherit" -->
+<!ATTLIST CHARSTYLE FCOLOR CDATA #REQUIRED> <!-- ="Black" -->
+<!ATTLIST CHARSTYLE FSHADE CDATA #REQUIRED> <!-- ="100" -->
+<!ATTLIST CHARSTYLE SCOLOR CDATA #REQUIRED> <!-- ="Black" -->
+<!ATTLIST CHARSTYLE SSHADE CDATA #REQUIRED> <!-- ="100" -->
+<!ATTLIST CHARSTYLE TXTSHX CDATA #REQUIRED> <!-- ="5" -->
+<!ATTLIST CHARSTYLE TXTSHY CDATA #REQUIRED> <!-- ="-5" -->
+<!ATTLIST CHARSTYLE TXTOUT CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CHARSTYLE TXTULP CDATA #REQUIRED> <!-- ="-0.1" -->
+<!ATTLIST CHARSTYLE TXTULW CDATA #REQUIRED> <!-- ="-0.1" -->
+<!ATTLIST CHARSTYLE TXTSTP CDATA #REQUIRED> <!-- ="-0.1" -->
+<!ATTLIST CHARSTYLE TXTSTW CDATA #REQUIRED> <!-- ="-0.1" -->
+<!ATTLIST CHARSTYLE SCALEH CDATA #REQUIRED> <!-- ="100" -->
+<!ATTLIST CHARSTYLE SCALEV CDATA #REQUIRED> <!-- ="100" -->
+<!ATTLIST CHARSTYLE BASEO CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST CHARSTYLE KERN CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST CHARSTYLE LANGUAGE CDATA #REQUIRED> <!-- ="en_GB" -->
+
+<!ELEMENT TableStyle (TableBorderLeft,TableBorderRight,TableBorderTop, TableBorderBottom)>
+<!ATTLIST TableStyle NAME CDATA #REQUIRED> <!-- ="Default Table Style" -->
+<!ATTLIST TableStyle DefaultStyle CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST TableStyle FillColor CDATA #REQUIRED> <!-- ="None" -->
+<!ATTLIST TableStyle FillShade CDATA #REQUIRED> <!-- ="100" -->
+
+<!ELEMENT TableBorderLeft (TableBorderLine)>
+
+<!ELEMENT TableBorderLine (EMPTY)>
+<!ATTLIST TableBorderLine Width CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST TableBorderLine PenStyle CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST TableBorderLine Color CDATA #REQUIRED> <!-- ="Black" -->
+<!ATTLIST TableBorderLine Shade CDATA #REQUIRED> <!-- ="100" -->
+
+<!ELEMENT TableBorderRight (TableBorderLine)>
+
+<!ELEMENT TableBorderTop (TableBorderLine)>
+
+<!ELEMENT TableBorderBottom (TableBorderLine)>
+
+
+<!ELEMENT CellStyle (TableBorderLeft,TableBorderRight,TableBorderTop, TableBorderBottom)>
+
+<!ATTLIST CellStyle NAME CDATA #REQUIRED> <!-- ="Default Cell Style" -->
+<!ATTLIST CellStyle DefaultStyle CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CellStyle FillColor CDATA #REQUIRED> <!-- ="None" -->
+<!ATTLIST CellStyle FillShade CDATA #REQUIRED> <!-- ="100" -->
+<!ATTLIST CellStyle LeftPadding CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CellStyle RightPadding CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CellStyle TopPadding CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST CellStyle BottomPadding CDATA #REQUIRED> <!-- ="1" -->
+
+<!ELEMENT LAYERS (EMPTY)>
+<!ATTLIST LAYERS NUMMER CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST LAYERS LEVEL CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST LAYERS NAME CDATA #REQUIRED> <!-- ="Background" -->
+<!ATTLIST LAYERS SICHTBAR CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST LAYERS DRUCKEN CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST LAYERS EDIT CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST LAYERS SELECT CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST LAYERS FLOW CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST LAYERS TRANS CDATA #REQUIRED> <!-- ="1" -->
+<!ATTLIST LAYERS BLEND CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST LAYERS OUTL CDATA #REQUIRED> <!-- ="0" -->
+<!ATTLIST LAYERS LAYERC CDATA #REQUIRED> <!-- ="#000000" -->
+
+<!ELEMENT Printer (EMPTY)>
+<!ATTLIST Printer firstUse #REQUIRED> <!-- ="1" -->
+<!ATTLIST Printer toFile #REQUIRED> <!-- ="156" -->
+<!ATTLIST Printer useAltPrintCommand #REQUIRED> <!-- ="192" -->
+<!ATTLIST Printer outputSeparations #REQUIRED> <!-- ="2" -->
+<!ATTLIST Printer useSpotColors #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer useColor #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer mirrorH #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer mirrorV #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer useICC #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer doGCR #REQUIRED> <!-- ="236" -->
+<!ATTLIST Printer doClip #REQUIRED> <!-- ="122" -->
+<!ATTLIST Printer setDevParam #REQUIRED> <!-- ="2" -->
+<!ATTLIST Printer useDocBleeds #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer cropMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer bleedMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer registrationMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer colorMarks #REQUIRED> <!-- ="48" -->
+<!ATTLIST Printer includePDFMarks #REQUIRED> <!-- ="141" -->
+<!ATTLIST Printer PSLevel #REQUIRED> <!-- ="3" -->
+<!ATTLIST Printer PDLanguage #REQUIRED> <!-- ="45190448" -->
+<!ATTLIST Printer markLength #REQUIRED> <!-- ="2.66854183278251e-316" -->
+<!ATTLIST Printer markOffset #REQUIRED> <!-- ="2.87428894932657e-316" -->
+<!ATTLIST Printer BleedTop #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer BleedLeft #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer BleedRight #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer BleedBottom #REQUIRED> <!-- ="0" -->
+<!ATTLIST Printer printer #REQUIRED> <!-- ="" -->
+<!ATTLIST Printer filename #REQUIRED> <!-- ="" -->
+<!ATTLIST Printer separationName #REQUIRED> <!-- ="" -->
+<!ATTLIST Printer printerCommand #REQUIRED> <!-- ="" -->
+
+<!ELEMENT PDF (LPI)>
+<!ATTLIST PDF firstUse #REQUIRED> <!-- ="1" -->
+<!ATTLIST PDF Thumbnails #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Articles #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Bookmarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Compress #REQUIRED> <!-- ="1" -->
+<!ATTLIST PDF CMethod #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Quality #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF MirrorH #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF MirrorV #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Clip #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF rangeSel #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF rangeTxt #REQUIRED> <!-- ="" -->
+<!ATTLIST PDF RotateDeg #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF PresentMode #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF RecalcPic #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Grayscale #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF RGBMode #REQUIRED> <!-- ="1" -->
+<!ATTLIST PDF UseProfiles #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF UseProfiles2 #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF Binding #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF PicRes #REQUIRED> <!-- ="300" -->
+<!ATTLIST PDF Resolution #REQUIRED> <!-- ="300" -->
+<!ATTLIST PDF Version #REQUIRED> <!-- ="14" -->
+<!ATTLIST PDF Intent #REQUIRED> <!-- ="1" -->
+<!ATTLIST PDF Intent2 #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF SolidP #REQUIRED> <!-- ="sRGB IEC61966-2.1" -->
+<!ATTLIST PDF ImageP #REQUIRED> <!-- ="sRGB IEC61966-2.1" -->
+<!ATTLIST PDF PrintP #REQUIRED> <!-- ="Fogra27L CMYK Coated Press" -->
+<!ATTLIST PDF InfoString #REQUIRED> <!-- ="" -->
+<!ATTLIST PDF BTop #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF BLeft #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF BRight #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF BBottom #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF useDocBleeds #REQUIRED> <!-- ="1" -->
+<!ATTLIST PDF cropMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF bleedMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF registrationMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF colorMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF docInfoMarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF markLength #REQUIRED> <!-- ="20" -->
+<!ATTLIST PDF markOffset #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF ImagePr #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF PassOwner #REQUIRED> <!-- ="" -->
+<!ATTLIST PDF PassUser #REQUIRED> <!-- ="" -->
+<!ATTLIST PDF Permissions #REQUIRED> <!-- ="-4" -->
+<!ATTLIST PDF Encrypt #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF UseLayers #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF UseLpi #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF UseSpotColors #REQUIRED> <!-- ="1" -->
+<!ATTLIST PDF doMultiFile #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF displayBookmarks #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF displayFullscreen #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF displayLayers #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF displayThumbs #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF hideMenuBar #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF hideToolBar #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF fitWindow #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF openAfterExport #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF PageLayout #REQUIRED> <!-- ="0" -->
+<!ATTLIST PDF openAction #REQUIRED> <!-- ="" -->
+
+<!ELEMENT LPI (EMPTY)>
+<!ATTLIST LPI Color #REQUIRED> <!-- ="Black" -->
+<!ATTLIST LPI Frequency #REQUIRED> <!-- ="133" -->
+<!ATTLIST LPI Angle #REQUIRED> <!-- ="45" -->
+<!ATTLIST LPI SpotFunction #REQUIRED> <!-- ="3" -->
+
+<!ELEMENT DocItemAttributes (EMPTY)>
+
+<!ELEMENT TablesOfContents (EMPTY)>
+
+<!ELEMENT NotesStyles (notesStyle)>
+
+<!ELEMENT notesStyle (EMPTY)>
+<!ATTLIST notesStyle Name #REQUIRED> <!-- ="Default" -->
+<!ATTLIST notesStyle Start #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle Endnotes #REQUIRED> <!-- ="0" -->
+<!ATTLIST notesStyle Type #REQUIRED> <!-- ="Type_1_2_3" -->
+<!ATTLIST notesStyle Range #REQUIRED> <!-- ="0" -->
+<!ATTLIST notesStyle Prefix #REQUIRED> <!-- ="" -->
+<!ATTLIST notesStyle Suffix #REQUIRED> <!-- =")" -->
+<!ATTLIST notesStyle AutoHeight #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle AutoWidth #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle AutoRemove #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle AutoWeld #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle SuperNote #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle SuperMaster #REQUIRED> <!-- ="1" -->
+<!ATTLIST notesStyle MarksStyle #REQUIRED> <!-- ="" -->
+<!ATTLIST notesStyle NotesStyle #REQUIRED> <!-- ="" -->
+
+<!ELEMENT PageSets (Set)>
+
+<!ELEMENT Set (PageNames)>
+<!ATTLIST Set Name #REQUIRED> <!-- ="Single Page" -->
+<!ATTLIST Set FirstPage #REQUIRED> <!-- ="0" -->
+<!ATTLIST Set Rows #REQUIRED> <!-- ="1" -->
+<!ATTLIST Set Columns #REQUIRED> <!-- ="1" -->
+
+<!ELEMENT PageNames (EMPTY)>
+<!ATTLIST Set Name #REQUIRED> <!-- ="Left Page" -->
+
+<!ELEMENT Sections (Section)>
+
+<!ELEMENT Section (EMPTY)>
+<!ATTLIST Section Number #REQUIRED> <!-- ="0" -->
+<!ATTLIST Section Name #REQUIRED> <!-- ="0" -->
+<!ATTLIST Section From #REQUIRED> <!-- ="0" -->
+<!ATTLIST Section To #REQUIRED> <!-- ="0" -->
+<!ATTLIST Section Type #REQUIRED> <!-- ="Type_1_2_3" -->
+<!ATTLIST Section Start #REQUIRED> <!-- ="1" -->
+<!ATTLIST Section Reversed #REQUIRED> <!-- ="0" -->
+<!ATTLIST Section Active #REQUIRED> <!-- ="1" -->
+<!ATTLIST Section FillChar #REQUIRED> <!-- ="0" -->
+<!ATTLIST Section FieldWidth #REQUIRED> <!-- ="0" -->
+
+<!ELEMENT MASTERPAGE (EMPTY)>
+<!ATTLIST MASTERPAGE PAGEXPOS #REQUIRED> <!-- ="100" -->
+<!ATTLIST MASTERPAGE PAGEYPOS #REQUIRED> <!-- ="20" -->
+<!ATTLIST MASTERPAGE PAGEWIDTH #REQUIRED> <!-- ="595.28" -->
+<!ATTLIST MASTERPAGE PAGEHEIGHT #REQUIRED> <!-- ="841.89" -->
+<!ATTLIST MASTERPAGE BORDERLEFT #REQUIRED> <!-- ="40" -->
+<!ATTLIST MASTERPAGE BORDERRIGHT #REQUIRED> <!-- ="40" -->
+<!ATTLIST MASTERPAGE BORDERTOP #REQUIRED> <!-- ="40" -->
+<!ATTLIST MASTERPAGE BORDERBOTTOM #REQUIRED> <!-- ="40" -->
+<!ATTLIST MASTERPAGE NUM #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE NAM #REQUIRED> <!-- ="Normal" -->
+<!ATTLIST MASTERPAGE MNAM #REQUIRED> <!-- ="" -->
+<!ATTLIST MASTERPAGE Size #REQUIRED> <!-- ="A4" -->
+<!ATTLIST MASTERPAGE Orientation #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE LEFT #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE PRESET #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE VerticalGuides #REQUIRED> <!-- ="" -->
+<!ATTLIST MASTERPAGE HorizontalGuides #REQUIRED> <!-- ="" -->
+<!ATTLIST MASTERPAGE AGhorizontalAutoGap #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE AGverticalAutoGap #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE AGhorizontalAutoCount #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE AGverticalAutoCount #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE AGhorizontalAutoRefer #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE AGverticalAutoRefer #REQUIRED> <!-- ="0" -->
+<!ATTLIST MASTERPAGE AGSelection #REQUIRED> <!-- ="3.0777e-316 3.07132e-316 3.07532e-316 3.07532e-316" -->
+
+<!ELEMENT PAGE (EMPTY)>
+<!ATTLIST PAGE PAGEXPOS #REQUIRED> <!-- ="100" -->
+<!ATTLIST PAGE PAGEYPOS #REQUIRED> <!-- ="20" -->
+<!ATTLIST PAGE PAGEWIDTH #REQUIRED> <!-- ="595.28" -->
+<!ATTLIST PAGE PAGEHEIGHT #REQUIRED> <!-- ="841.89" -->
+<!ATTLIST PAGE BORDERLEFT #REQUIRED> <!-- ="40" -->
+<!ATTLIST PAGE BORDERRIGHT #REQUIRED> <!-- ="40" -->
+<!ATTLIST PAGE BORDERTOP #REQUIRED> <!-- ="40" -->
+<!ATTLIST PAGE BORDERBOTTOM #REQUIRED> <!-- ="40" -->
+<!ATTLIST PAGE NUM #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE NAM #REQUIRED> <!-- ="" -->
+<!ATTLIST PAGE MNAM #REQUIRED> <!-- ="Normal" -->
+<!ATTLIST PAGE Size #REQUIRED> <!-- ="A4" -->
+<!ATTLIST PAGE Orientation #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE LEFT #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE PRESET #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE VerticalGuides #REQUIRED> <!-- ="" -->
+<!ATTLIST PAGE HorizontalGuides #REQUIRED> <!-- ="" -->
+<!ATTLIST PAGE AGhorizontalAutoGap #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE AGverticalAutoGap #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE AGhorizontalAutoCount #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE AGverticalAutoCount #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE AGhorizontalAutoRefer #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE AGverticalAutoRefer #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGE AGSelection #REQUIRED> <!-- ="3.07132e-316 6.90162e-310 6.90162e-310 2.80439e-316" -->
+
+<!ELEMENT PAGEOBJECT (ITEXT?,trail,WeldEntry)>
+
+<!ELEMENT ITEXT (EMPTY)>
+<!ATTLIST ITEXT CH #REQUIRED> <!-- ="kljkljkl" -->
+
+<!ATTLIST PAGEOBJECT XPOS #REQUIRED> <!-- ="197.25" -->
+<!ATTLIST PAGEOBJECT YPOS #REQUIRED> <!-- ="145" -->
+<!ATTLIST PAGEOBJECT OwnPage #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT ItemID #REQUIRED> <!-- ="61080736" -->
+<!ATTLIST PAGEOBJECT PTYPE #REQUIRED> <!-- ="2" -->
+<!ATTLIST PAGEOBJECT WIDTH #REQUIRED> <!-- ="150.75" -->
+<!ATTLIST PAGEOBJECT HEIGHT #REQUIRED> <!-- ="205" -->
+<!ATTLIST PAGEOBJECT FRTYPE #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT CLIPEDIT #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT PWIDTH #REQUIRED> <!-- ="1" -->
+<!ATTLIST PAGEOBJECT PLINEART #REQUIRED> <!-- ="1" -->
+<!ATTLIST PAGEOBJECT isWeldItem #REQUIRED> <!-- ="1" -->
+<!ATTLIST PAGEOBJECT WeldSource #REQUIRED> <!-- ="61080736" -->
+<!ATTLIST PAGEOBJECT LOCALSCX #REQUIRED> <!-- ="0.0529442148760331" -->
+<!ATTLIST PAGEOBJECT LOCALSCY #REQUIRED> <!-- ="0.0529442148760331" -->
+<!ATTLIST PAGEOBJECT LOCALX #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT LOCALY #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT LOCALROT #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT PICART #REQUIRED> <!-- ="1" -->
+<!ATTLIST PAGEOBJECT SCALETYPE #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT RATIO #REQUIRED> <!-- ="1" -->
+<!ATTLIST PAGEOBJECT Pagenumber #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT PFILE #REQUIRED> <!-- ="docs/src/scribus-ui-iv-iu/plugin/export_epub/sample/rennes_600.jpg" -->
+<!ATTLIST PAGEOBJECT IRENDER #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT EMBEDDED #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT path #REQUIRED> <!-- ="M0 0 L150.75 0 L150.75 205 L0 205 L0 0 Z" -->
+<!ATTLIST PAGEOBJECT copath #REQUIRED> <!-- ="M0 0 L150.75 0 L150.75 205 L0 205 L0 0 Z" -->
+<!ATTLIST PAGEOBJECT ImageRes #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT gXpos #REQUIRED> <!-- ="197.25" -->
+<!ATTLIST PAGEOBJECT gYpos #REQUIRED> <!-- ="145" -->
+<!ATTLIST PAGEOBJECT gWidth #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT gHeight #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT LAYER #REQUIRED> <!-- ="0" -->
+<!ATTLIST PAGEOBJECT NEXTITEM #REQUIRED> <!-- ="-1" -->
+<!ATTLIST PAGEOBJECT BACKITEM #REQUIRED> <!-- ="-1" -->
+
+<!ELEMENT trail (EMPTY)>
+
+<!ELEMENT WeldEntry (EMPTY)>
+<!ATTLIST WeldEntry Target #REQUIRED> <!-- ="35981808" -->
+<!ATTLIST WeldEntry WX #REQUIRED> <!-- ="77.0625" -->
+<!ATTLIST WeldEntry WY #REQUIRED> <!-- ="171.6875" -->
