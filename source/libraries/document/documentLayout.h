@@ -7,7 +7,7 @@
 
 #include "global/global.h"
 
-#include "libraries/QtNoGui/qcolor.h"
+#include "thirdparty/QtNoGui/qcolor.h"
 
 class DOCUMENTSHARED_EXPORT DocumentLayout
 {

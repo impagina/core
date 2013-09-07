@@ -6,8 +6,9 @@ TEMPLATE = lib
 DEFINES += DOCUMENT_LIBRARY
 
 INCLUDEPATH  += \
-    ../ \
-    ../libraries
+    .. \
+    ../libraries \
+    ../..
 
 #SCRIBUSLIBRARIESDIR = $$OUT_PWD/../../../libraries
 SCRIBUSLIBRARIESDIR = /home/ale/docs/src/impagina-core-build/libraries

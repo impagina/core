@@ -12,7 +12,8 @@ TEMPLATE = lib
 DEFINES += QTNOGUI_LIBRARY
 
 INCLUDEPATH  += \
-    ../../libraries
+    .. \
+    ../../../libraries
 
 SOURCES += qtnogui.cpp \
     qcolor.cpp \

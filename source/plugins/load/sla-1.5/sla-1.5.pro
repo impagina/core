@@ -13,7 +13,8 @@ CONFIG   += debug
 
 INCLUDEPATH  += \
     ../../.. \
-    ../../../libraries
+    ../../../libraries \
+    ../../../thirdparty
 
 #SCRIBUSLIBRARIESDIR = $$OUT_PWD/../../../libraries
 SCRIBUSLIBRARIESDIR = /home/ale/docs/src/impagina-core-build/libraries
